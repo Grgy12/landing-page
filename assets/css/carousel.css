@@ -1,0 +1,28 @@
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Move two sets of images */
+    }
+  }
+  
+  /* Carousel */
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite; /* Adjust duration for speed */
+  }
+  
+  .carousel-item {
+    flex: 0 0 calc(100% / 12); /* Show 6 images at a time */
+    max-width: calc(100% / 12);
+  }
+  
+  /* Images */
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
